@@ -29,10 +29,12 @@ jobs:
         echo "Integration tests"
 
     - name: Code Quality Check Stage
-      run: echo "Check the quality of the code"
+      run: |
+        echo "Check the quality of the code"
 
     - name: Deploy Stage
-      run: echo "Deploy the application to a testing environment specified by the environment variable: $TESTING_ENVIRONMENT"
+      run: |
+        echo "Deploy the application to a testing environment specified by the environment variable: $TESTING_ENVIRONMENT"
 
     - name: Approval Stage
       run: |
@@ -40,5 +42,5 @@ jobs:
         sleep 10
 
     - name: Deploy to Production Stage
-      run: echo "Deploying the application to the production environment: $PRODUCTION_ENVIRONMENT"
-
+      run: |
+        echo "Deploying the application to the production environment: $PRODUCTION_ENVIRONMENT"
